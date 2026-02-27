@@ -1,0 +1,325 @@
+/* ===========================
+   General Reset & Body
+=========================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+    background: #fdfdfd;
+    color: #222;
+   line-height: 1.6;
+
+}
+
+/* ===========================
+   Layout
+=========================== */
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+/* ===========================
+   Header
+=========================== */
+.header {
+  position: sticky;
+  top: 0;
+  background: white;
+  box-shadow: 0 18px 35px rgba(170, 177, 180, 0.858);
+  z-index: 100;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+}
+
+nav a {
+  margin-left: 18px;
+  text-decoration: none;
+  color: #444;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #095fea;
+}
+
+/* ===========================
+   Hero
+=========================== */
+.hero {
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+   background: 
+    linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.85)),
+    url(./assets/images-1/hero-bg1.jpg.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #ffffff;
+ 
+
+}
+
+.hero-content {
+  text-align: center;
+}
+
+.hero span {
+  color: #3b82f6;
+}
+
+.subtitle {
+  margin: 15px 0 25px;
+  color: #555;
+}
+
+.btn {
+  background: #3b82f6;
+  color: white;
+  padding: 12px 28px;
+  border-radius: 25px;
+  text-decoration: none;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.btn:hover {
+  background: #4d669d;
+  transform: scale(1.05);
+}
+
+/* ===========================
+   Sections
+=========================== */
+.section {
+  padding: 80px 0;
+}
+
+.section.light {
+  background: #ffffff;
+}
+
+.section h2 {
+  margin-bottom: 25px;
+  font-size: 30px;
+}
+
+/* ===========================
+   Text
+=========================== */
+.text {
+  max-width: 700px;
+  color: #555;
+}
+
+/* ===========================
+   Cards: About / Skills / Projects / Certifications
+=========================== */
+.card,
+.skill-card,
+.project-card,
+.certification-card {
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 18px 35px rgba(251, 251, 251, 0.727);
+  transition: transform 0.4s cubic-bezier(0.4,0,0.2,1),
+              box-shadow 0.4s ease,
+              background 0.4s ease;
+  cursor: pointer;
+}
+
+.card:hover,
+.skill-card:hover,
+.project-card:hover,
+.certification-card:hover,
+.card:focus,
+.skill-card:focus,
+.project-card:focus,
+.certification-card:focus {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 18px 35px rgba(123, 145, 148, 0.553);
+  background: #f0f4ff;
+}
+
+/* ===========================
+   Skills Grid
+=========================== */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+.skill-icons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.skill-icons i {
+  font-size: 30px;
+  color: #3b82f6;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.skill-icons i:hover,
+.skill-icons i:focus {
+  transform: rotate(-10deg) scale(1.2);
+  color: #2563eb;
+}
+
+/* ===========================
+   Projects Grid
+=========================== */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+.project-card h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
+  color: #222;
+}
+
+.project-card .project-tech,
+.project-card .project-desc,
+.project-card .project-duration {
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.tech-icons i {
+  font-size: 30px;
+  color: #9ccf19;
+  margin-right: 12px;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.tech-icons i:hover,
+.tech-icons i:focus {
+  transform: rotate(-10deg) scale(1.2);
+  color: #2563eb;
+}
+
+/* ===========================
+   Certifications Grid
+=========================== */
+.certifications-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+.certification-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.certification-card img.cert-icon {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  margin-bottom: 12px;
+}
+
+.certification-card h3 {
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.certification-card p {
+  font-size: 14px;
+  color: #555;
+}
+
+/* ===========================
+   Contact
+=========================== */
+.contact-box a {
+  display: inline-block;
+  margin-right: 20px;
+  font-size: 18px;
+  color: #333;
+  text-decoration: none;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.contact-box a:hover,
+.contact-box a:focus {
+  color: #3b82f6;
+  transform: scale(1.1);
+}
+
+/* ===========================
+   Fade-in Animation
+=========================== */
+.fade {
+  opacity: 1;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+
+.fade.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* NAV LINK UNDERLINE EFFECT */
+nav a {
+  position: relative;
+  font-weight: 500;
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  left: 0;
+  bottom: -6px;
+  background: #1e7fe7;
+  transition: width 0.3s ease;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+nav a {
+  margin-left: 18px;
+  text-decoration: none;
+  color: #444;
+  display: inline-block;
+  transition:transform 0.15s ease,color 0.3s ease;
+}
+
+nav a:hover {
+  color: #3b82f6;
+  transform: translateY(-3px);
+}
+nav a:active{
+    transform: scale(0.92);
+}
+.header {
+  transition: box-shadow 0.3s ease, background 0.3s ease;
+}
+
+.header.scrolled {
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
